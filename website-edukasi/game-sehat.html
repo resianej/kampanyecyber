@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rekomendasi Game Sehat</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#eef0ff;
+padding:20px;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.back{
+display:inline-block;
+padding:12px 20px;
+background:linear-gradient(
+90deg,
+#6f4cff,
+#b05dff
+);
+color:white;
+text-decoration:none;
+border-radius:15px;
+font-weight:600;
+margin-bottom:25px;
+}
+
+.header{
+text-align:center;
+margin-bottom:35px;
+}
+
+.header h1{
+font-size:42px;
+color:#6f4cff;
+}
+
+.header p{
+margin-top:10px;
+color:#666;
+line-height:1.8;
+}
+
+.game-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(
+280px,
+1fr
+)
+);
+
+gap:25px;
+
+}
+
+.game-card{
+
+background:white;
+
+border-radius:25px;
+
+overflow:hidden;
+
+box-shadow:
+0 10px 25px
+rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.game-card:hover{
+
+transform:
+translateY(-5px);
+
+}
+
+.game-card img{
+
+width:100%;
+
+height:200px;
+
+object-fit:cover;
+
+}
+
+.game-content{
+
+padding:20px;
+
+}
+
+.game-content h2{
+
+margin-bottom:10px;
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:6px 12px;
+
+background:#ede9fe;
+
+color:#6f4cff;
+
+border-radius:30px;
+
+font-size:13px;
+
+font-weight:600;
+
+margin-bottom:12px;
+
+}
+
+.game-content p{
+
+line-height:1.8;
+
+color:#555;
+
+margin-bottom:15px;
+
+}
+
+.benefit{
+
+background:#f8fafc;
+
+padding:12px;
+
+border-radius:12px;
+
+font-size:14px;
+
+line-height:1.7;
+
+}
+.more-games{
+
+margin-top:40px;
+
+background:linear-gradient(
+135deg,
+#6f4cff,
+#b05dff
+);
+
+padding:40px;
+
+border-radius:25px;
+
+text-align:center;
+
+color:white;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.more-games h2{
+
+font-size:36px;
+
+margin-bottom:15px;
+
+}
+
+.more-games p{
+
+max-width:800px;
+
+margin:12px auto;
+
+line-height:1.8;
+
+font-size:17px;
+
+color:rgba(255,255,255,.95);
+
+}
+.game-card{
+display:flex;
+flex-direction:column;
+height:100%;
+}
+
+.game-content{
+display:flex;
+flex-direction:column;
+flex:1;
+}
+
+.benefit{
+margin-top:auto;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<a href="index.html" class="back">
+⬅ Kembali ke Beranda
+</a>
+
+<div class="header">
+
+<h1>
+🎮 Rekomendasi Game Sehat
+</h1>
+
+<p>
+
+Game tidak selalu berdampak buruk.
+Beberapa game dapat membantu melatih kreativitas,
+strategi, kerja sama tim,
+dan kemampuan memecahkan masalah
+jika dimainkan secara seimbang.
+
+</p>
+
+</div>
+
+<div class="game-grid">
+
+<!-- Minecraft -->
+
+<div class="game-card">
+
+<img src="assets/minecraft.jpg" alt="Minecraft">
+<div class="game-content">
+
+<span class="tag">
+Kreativitas
+</span>
+
+<h2>Minecraft</h2>
+
+<p>
+
+Game sandbox yang memungkinkan pemain
+membangun berbagai struktur,
+menjelajah dunia,
+dan bekerja sama dengan pemain lain.
+
+</p>
+
+<div class="benefit">
+
+✅ Melatih kreativitas<br>
+✅ Problem solving<br>
+✅ Kerja sama tim<br>
+✅ Perencanaan strategi
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Stardew Valley -->
+
+<div class="game-card">
+
+<img src="assets/stardew.jpg" alt="Minecraft">
+
+<div class="game-content">
+
+<span class="tag">
+Relaksasi
+</span>
+
+<h2>Stardew Valley</h2>
+
+<p>
+
+Game simulasi pertanian
+dengan gameplay santai
+yang membantu pemain mengatur waktu
+dan mengelola sumber daya.
+
+</p>
+
+<div class="benefit">
+
+✅ Mengurangi stres<br>
+✅ Manajemen waktu<br>
+✅ Pengambilan keputusan<br>
+✅ Fokus jangka panjang
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Overcooked -->
+
+<div class="game-card">
+
+<img src="assets/over.jpg" alt="Minecraft">
+
+<div class="game-content">
+
+<span class="tag">
+Kerja Sama Tim
+</span>
+
+<h2>Overcooked</h2>
+
+<p>
+
+Game memasak multiplayer
+yang menuntut komunikasi,
+koordinasi,
+dan pembagian tugas yang baik.
+
+</p>
+
+<div class="benefit">
+
+✅ Komunikasi tim<br>
+✅ Kerja sama<br>
+✅ Koordinasi tugas<br>
+✅ Pengambilan keputusan cepat
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Tetris -->
+
+<div class="game-card">
+
+<img src="assets/tetris.jpg" alt="Minecraft">
+
+<div class="game-content">
+
+<span class="tag">
+Logika
+</span>
+
+<h2>Tetris</h2>
+
+<p>
+
+Game puzzle klasik
+yang membantu meningkatkan
+kecepatan berpikir
+dan kemampuan mengenali pola.
+
+</p>
+
+<div class="benefit">
+
+✅ Melatih logika<br>
+✅ Fokus dan konsentrasi<br>
+✅ Mengenali pola<br>
+✅ Pengambilan keputusan
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="game-card">
+
+<img src="assets/roblox.jpg" alt="Roblox">
+
+<div class="game-content">
+
+<span class="tag">
+Kreativitas
+</span>
+
+<h2>Roblox</h2>
+
+<p>
+
+Tidak hanya berisi game,
+Roblox juga menyediakan fitur
+untuk membuat game sendiri
+menggunakan Roblox Studio.
+
+</p>
+
+<div class="benefit">
+
+✅ Belajar dasar coding<br>
+✅ Kreativitas<br>
+✅ Desain game<br>
+✅ Problem solving
+
+</div>
+
+</div>
+
+</div>
+<div class="game-card">
+
+<img src="assets/pokemon.jpg" alt="Pokemon GO">
+
+<div class="game-content">
+
+<span class="tag">
+Aktivitas Fisik
+</span>
+
+<h2>Pokémon GO</h2>
+
+<p>
+
+Game berbasis lokasi yang
+mengajak pemain berjalan kaki
+untuk menjelajahi lingkungan sekitar.
+
+</p>
+
+<div class="benefit">
+
+✅ Mendorong aktivitas fisik<br>
+✅ Eksplorasi lingkungan<br>
+✅ Interaksi sosial<br>
+✅ Mengurangi sedentary lifestyle
+
+</div>
+
+</div>
+
+</div>
+
+<div class="game-card">
+
+<img src="assets/cities.jpg" alt="Cities Skylines">
+
+<div class="game-content">
+
+<span class="tag">
+Strategi
+</span>
+
+<h2>Cities: Skylines</h2>
+
+<p>
+
+Game simulasi pembangunan kota
+yang mengajarkan perencanaan,
+manajemen sumber daya,
+dan pengambilan keputusan.
+
+</p>
+
+<div class="benefit">
+
+✅ Berpikir strategis<br>
+✅ Manajemen sumber daya<br>
+✅ Perencanaan jangka panjang<br>
+✅ Analisis masalah
+</div>
+
+</div>
+</div>
+
+<div class="game-card">
+
+<img src="assets/growtopia.jpg" alt="Growtopia">
+
+<div class="game-content">
+
+<span class="tag">
+Kreativitas & Ekonomi
+</span>
+
+
+<h2>Growtopia</h2>
+
+<p>
+
+Growtopia adalah game sandbox multiplayer
+yang memungkinkan pemain membangun dunia sendiri,
+berdagang item, serta berinteraksi dengan pemain
+dari berbagai negara.
+
+</p>
+
+<div class="benefit">
+
+✅ Melatih kreativitas dalam membangun dunia<br>
+✅ Belajar dasar ekonomi dan perdagangan virtual<br>
+✅ Melatih pengambilan keputusan saat trading
+
+
+</div>
+
+
+</div>
+</div>
+</div> <!-- game-card Growtopia -->
+
+</div> <!-- game-grid -->
+
+<div class="more-games">
+
+<h2>🎮 Masih Banyak Game Positif Lainnya</h2>
+
+<p>
+Selain game yang disebutkan di atas, masih banyak game lain
+yang dapat memberikan manfaat apabila dimainkan secara bijak
+dan tidak berlebihan.
+</p>
+
+<p>
+Beberapa contohnya adalah Terraria, The Sims, Portal 2,
+Plants vs Zombies, Animal Crossing, Civilization VI,
+Human Fall Flat, Raft, Don't Starve Together,
+dan berbagai game edukatif lainnya.
+</p>
+
+<p>
+Yang terpenting bukan hanya jenis gamenya,
+tetapi bagaimana pemain mengatur waktu bermain,
+menjaga keseimbangan aktivitas sehari-hari,
+serta tetap memprioritaskan kesehatan,
+pendidikan, dan hubungan sosial.
+</p>
+
+</div>
+
+</div> <!-- container -->
+
+</body>
+</html>
+</body>
+
+</html>

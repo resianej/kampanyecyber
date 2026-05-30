@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tips Game Smart</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: auto;
+    font-size: 1rem;
+}
+
+/* GRID */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    transition: 0.3s ease;
+    cursor: default;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border: 1px solid rgba(56, 189, 248, 0.5);
+}
+
+/* ICON */
+.icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* TITLE */
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 6px;
+}
+
+/* TEXT */
+.card p {
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+/* INFO BOX */
+.info {
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+/* BUTTON */
+.back {
+    display: inline-block;
+    margin: 30px 0 50px;
+    padding: 12px 22px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: #0ea5e9;
+    transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width:600px){
+    .header h1 {
+        font-size: 1.8rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="header">
+    <h1>🛠️ Tips Game Smart</h1>
+    <p>
+        Bermain game itu boleh dan menyenangkan, tapi harus tetap seimbang.
+        Dengan cara yang tepat, kamu bisa tetap enjoy game tanpa mengganggu sekolah, kesehatan, dan kehidupan sosial.
+    </p>
+</section>
+
+<section class="container">
+
+    <div class="info">
+        💡 Berikut adalah tips sederhana agar kamu bisa bermain game dengan lebih sehat, terkontrol, dan tetap produktif setiap hari.
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="icon">⏰</div>
+            <h3>Batasi Waktu</h3>
+            <p>Tentukan durasi bermain maksimal setiap hari agar tidak mengganggu aktivitas utama.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>Prioritas Utama</h3>
+            <p>Kerjakan tugas sekolah, pekerjaan, atau tanggung jawab sebelum bermain game.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">😴</div>
+            <h3>Tidur Cukup</h3>
+            <p>Hindari begadang karena game agar tubuh tetap sehat dan fokus keesokan harinya.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🚶</div>
+            <h3>Istirahat Rutin</h3>
+            <p>Berhenti setiap 1 jam untuk mengistirahatkan mata dan tubuh dari layar.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👥</div>
+            <h3>Interaksi Sosial</h3>
+            <p>Jangan hanya bermain game, tetap jaga hubungan dengan keluarga dan teman.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎯</div>
+            <h3>Target Harian</h3>
+            <p>Buat target harian agar game tidak mengganggu tujuan utama hidup kamu.</p>
+        </div>
+        <div class="card">
+    <div class="icon">📵</div>
+    <h3>Jauhkan Distraksi</h3>
+    <p>Matikan notifikasi game atau media sosial saat belajar agar tidak tergoda untuk bermain terus.</p>
+</div>
+
+<div class="card">
+    <div class="icon">🧘</div>
+    <h3>Kontrol Emosi</h3>
+    <p>Jangan bermain saat sedang marah atau stres berlebihan, karena bisa membuat durasi bermain tidak terkontrol.</p>
+</div>
+
+    </div>
+
+    <div style="text-align:center;">
+        <a href="index.html" class="back">🏠 Kembali</a>
+    </div>
+
+</section>
+
+</body>
+</html>

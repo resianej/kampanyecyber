@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Challenge 7 Hari</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+
+body{
+font-family:Poppins,sans-serif;
+background:#0b1020;
+color:white;
+padding:20px;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+}
+
+#username{
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+margin-bottom:20px;
+font-size:16px;
+}
+
+.card{
+background:#151d35;
+padding:20px;
+margin-bottom:15px;
+border-radius:15px;
+}
+
+.progress-box{
+background:#222;
+height:20px;
+border-radius:20px;
+overflow:hidden;
+margin:15px 0;
+}
+
+.progress{
+height:100%;
+width:0%;
+background:linear-gradient(
+90deg,
+#8b5cf6,
+#22c55e
+);
+transition:0.5s;
+}
+
+.badge{
+display:none;
+background:#1e293b;
+padding:20px;
+border-radius:15px;
+text-align:center;
+margin-top:20px;
+border:2px solid gold;
+}
+
+h1{
+text-align:center;
+}
+
+label{
+display:block;
+margin:15px 0;
+cursor:pointer;
+}
+
+input[type="checkbox"]{
+transform:scale(1.3);
+margin-right:10px;
+}
+
+.quote{
+margin-top:15px;
+font-style:italic;
+color:#cbd5e1;
+}
+
+#downloadBtn{
+margin-top:20px;
+padding:12px 20px;
+border:none;
+border-radius:10px;
+background:gold;
+font-weight:bold;
+cursor:pointer;
+}
+
+#downloadBtn:hover{
+opacity:.9;
+}
+.back{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:12px 20px;
+
+background:linear-gradient(
+135deg,
+#6f4cff,
+#b05dff
+);
+
+color:#fff !important;
+
+text-decoration:none !important;
+
+font-weight:600;
+
+border-radius:14px;
+
+box-shadow:
+0 8px 20px rgba(111,76,255,.35);
+
+transition:.3s;
+
+margin-bottom:20px;
+}
+
+.back:hover{
+transform:translateY(-2px);
+}
+
+.back-wrapper{
+margin-bottom:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+<a href="index.html" class="back">
+🏠 Kembali ke Beranda
+</a>
+
+
+<h1>🏆 Challenge 7 Hari</h1>
+
+<input
+type="text"
+id="username"
+placeholder="Masukkan Nama Anda">
+
+<p>
+Selesaikan tantangan berikut untuk membangun kebiasaan bermain yang lebih sehat.
+</p>
+
+<div class="progress-box">
+<div class="progress" id="progressBar"></div>
+</div>
+
+<p id="progressText">
+0 / 7 selesai
+</p>
+
+<div class="card">
+
+<label>
+<input type="checkbox" class="task">
+Hari 1 - Selesaikan tugas sebelum bermain
+</label>
+
+<label>
+<input type="checkbox" class="task">
+Hari 2 - Batasi bermain maksimal 2 jam
+</label>
+
+<label>
+<input type="checkbox" class="task">
+Hari 3 - Tidak bermain saat belajar
+</label>
+
+<label>
+<input type="checkbox" class="task">
+Hari 4 - Istirahat setiap 60 menit
+</label>
+
+<label>
+<input type="checkbox" class="task">
+Hari 5 - Tidur sebelum jam 11 malam
+</label>
+
+<label>
+<input type="checkbox" class="task">
+Hari 6 - Luangkan waktu bersama keluarga atau teman
+</label>
+
+<label>
+<input type="checkbox" class="task">
+Hari 7 - Evaluasi kebiasaan bermainmu
+</label>
+
+</div>
+
+<div class="badge" id="badge">
+
+<h2>🏆 Badge Unlocked!</h2>
+
+<h3>Pemain Seimbang</h3>
+
+<p>
+Selamat! Kamu berhasil menyelesaikan Challenge 7 Hari Bermain Sehat.
+</p>
+
+<div class="quote">
+"Game tetap seru ketika kamu yang mengendalikan waktu, bukan sebaliknya."
+</div>
+
+<button
+id="downloadBtn"
+type="button"
+onclick="downloadCertificate()">
+
+📜 Download Sertifikat PDF
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+const checkboxes =
+document.querySelectorAll(".task");
+
+const progressBar =
+document.getElementById("progressBar");
+
+const progressText =
+document.getElementById("progressText");
+
+const badge =
+document.getElementById("badge");
+
+const usernameInput =
+document.getElementById("username");
+
+usernameInput.value =
+localStorage.getItem("username")
+|| "";
+
+usernameInput.addEventListener(
+"input",
+()=>{
+localStorage.setItem(
+"username",
+usernameInput.value
+);
+}
+);
+
+function updateProgress(){
+
+let checked = 0;
+
+checkboxes.forEach(cb=>{
+
+if(cb.checked){
+checked++;
+}
+
+});
+
+const percent =
+(checked / checkboxes.length) * 100;
+
+progressBar.style.width =
+percent + "%";
+
+progressText.innerHTML =
+checked +
+" / " +
+checkboxes.length +
+" selesai";
+
+if(
+checked === checkboxes.length
+){
+
+badge.style.display =
+"block";
+
+}else{
+
+badge.style.display =
+"none";
+
+}
+
+localStorage.setItem(
+"challengeData",
+JSON.stringify(
+[...checkboxes]
+.map(cb=>cb.checked)
+)
+);
+
+}
+
+const saved =
+JSON.parse(
+localStorage.getItem(
+"challengeData"
+)
+);
+
+if(saved){
+
+checkboxes.forEach(
+(cb,index)=>{
+
+cb.checked =
+saved[index];
+
+}
+);
+
+}
+
+checkboxes.forEach(cb=>{
+
+cb.addEventListener(
+"change",
+updateProgress
+);
+
+});
+
+updateProgress();
+
+async function downloadCertificate(){
+
+const { jsPDF } =
+window.jspdf;
+
+const username =
+document.getElementById(
+"username"
+).value
+|| "Peserta";
+
+const date =
+new Date()
+.toLocaleDateString(
+"id-ID"
+);
+
+const pdf =
+new jsPDF(
+"landscape",
+"mm",
+"a4"
+);
+
+pdf.setDrawColor(
+212,
+175,
+55
+);
+
+pdf.setLineWidth(3);
+
+pdf.rect(
+10,
+10,
+277,
+190
+);
+
+pdf.setFontSize(28);
+
+pdf.text(
+"CERTIFICATE OF ACHIEVEMENT",
+148,
+40,
+{
+align:"center"
+}
+);
+
+pdf.setFontSize(16);
+
+pdf.text(
+"Diberikan Kepada",
+148,
+65,
+{
+align:"center"
+}
+);
+
+pdf.setFontSize(24);
+
+pdf.text(
+username,
+148,
+85,
+{
+align:"center"
+}
+);
+
+pdf.setFontSize(14);
+
+pdf.text(
+"Telah berhasil menyelesaikan Challenge 7 Hari Bermain Sehat",
+148,
+110,
+{
+align:"center"
+}
+);
+
+pdf.text(
+"dan menunjukkan komitmen untuk bermain secara bijak",
+148,
+120,
+{
+align:"center"
+}
+);
+
+pdf.setFontSize(18);
+
+pdf.text(
+"Main Boleh, Kecanduan Jangan",
+148,
+145,
+{
+align:"center"
+}
+);
+
+pdf.setFontSize(12);
+
+pdf.text(
+"Tanggal: " + date,
+148,
+165,
+{
+align:"center"
+}
+);
+
+pdf.save(
+"Sertifikat_" +
+username.replace(/\s+/g,"_") +
+".pdf"
+);
+
+}
+
+</script>
+
+</body>
+</html>

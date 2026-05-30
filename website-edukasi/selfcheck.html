@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Self Check Gaming</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* CONTAINER */
+.test {
+    max-width: 850px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+/* PROGRESS */
+.progress-box {
+    width: 100%;
+    height: 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    transition: 0.4s ease;
+}
+
+/* QUESTION CARD */
+.question {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    text-align: left;
+}
+
+.question h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+    font-size: 1rem;
+}
+
+.option {
+    display: block;
+    margin: 6px 0;
+    color: #e2e8f0;
+    cursor: pointer;
+}
+
+/* BUTTON */
+.submit {
+    margin-top: 20px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 12px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit:hover {
+    background: #0ea5e9;
+    transform: scale(1.05);
+}
+
+/* RESULT */
+#hasil {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    display: none;
+}
+
+/* BACK */
+.back {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: rgba(255,255,255,0.2);
+}
+</style>
+</head>
+
+<body>
+
+<section class="test">
+
+<h1>🎮 Self Check</h1>
+<p>Jawab sesuai kebiasaanmu dalam 1 bulan terakhir</p>
+
+<div class="progress-box">
+    <div class="progress" id="bar"></div>
+</div>
+
+<form id="quiz"></form>
+
+<button class="submit" onclick="hitung()">Lihat Hasil</button>
+
+<div id="hasil"></div>
+
+<a href="index.html" class="back">🏠 Kembali ke Beranda</a>
+
+</section>
+
+<script>
+const questions = [
+    "Apakah kamu sering bermain game lebih dari 3 jam sehari?",
+    "Apakah kamu sulit berhenti saat sudah mulai bermain?",
+    "Apakah kamu sering mengabaikan tugas karena game?",
+    "Apakah kamu pernah begadang karena game?",
+    "Apakah kamu lebih memilih game daripada aktivitas lain?"
+];
+
+const quiz = document.getElementById("quiz");
+
+questions.forEach((q, i) => {
+    quiz.innerHTML += `
+    <div class="question">
+        <h3>${i+1}. ${q}</h3>
+        <label class="option"><input type="radio" name="q${i}" value="1"> Ya</label>
+        <label class="option"><input type="radio" name="q${i}" value="0"> Tidak</label>
+    </div>
+    `;
+});
+
+function hitung() {
+    let total = 0;
+
+    questions.forEach((_, i) => {
+        let val = document.querySelector(`input[name="q${i}"]:checked`);
+        if (val && val.value == "1") total++;
+    });
+
+    let bar = document.getElementById("bar");
+    bar.style.width = (total / questions.length) * 100 + "%";
+
+    let hasil = document.getElementById("hasil");
+    hasil.style.display = "block";
+
+    let status = "";
+
+    if (total <= 1) status = "🟢 Aman - kamu masih bisa mengontrol game dengan baik";
+    else if (total <= 3) status = "🟡 Waspada - mulai atur waktu bermain";
+    else status = "🔴 Tinggi - kamu berisiko kecanduan game";
+
+    hasil.innerHTML = `
+        <h2>Hasil Self Check</h2>
+        <p>${status}</p>
+        <p>Skor kamu: ${total}/${questions.length}</p>
+    `;
+}
+</script>
+
+</body>
+</html>

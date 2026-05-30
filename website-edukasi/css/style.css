@@ -1,0 +1,1011 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#eef0ff;
+color:#222;
+}
+
+/* ================= */
+/* HERO */
+/* ================= */
+
+.hero{
+
+background:
+linear-gradient(
+180deg,
+#060a2d,
+#141f57
+);
+
+padding:40px;
+
+color:white;
+
+}
+
+nav{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+display:flex;
+
+gap:12px;
+
+align-items:center;
+
+}
+
+.logo h3{
+
+font-size:28px;
+
+}
+
+.logo p{
+
+color:#9b7bff;
+
+}
+
+.hero-content{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:40px;
+
+margin-top:40px;
+
+}
+
+.left{
+
+flex:1;
+
+}
+
+.left h1{
+
+font-size:72px;
+
+line-height:1.1;
+
+}
+
+.left span{
+
+color:#d6ff57;
+
+}
+
+.left p{
+
+margin-top:20px;
+
+font-size:20px;
+
+line-height:1.8;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:15px;
+
+margin-top:30px;
+
+}
+
+button{
+
+padding:18px 26px;
+
+border:none;
+
+border-radius:18px;
+
+cursor:pointer;
+
+}
+
+.btn1{
+
+background:#825cff;
+
+color:white;
+
+}
+
+.btn2{
+
+background:transparent;
+
+border:2px solid yellow;
+
+color:white;
+
+}
+
+/* HERO IMAGE SAJA */
+
+.right img{
+
+width:100%;
+
+max-width:520px;
+
+display:block;
+
+object-fit:contain;
+
+}
+
+/* ================= */
+/* MENU */
+/* ================= */
+
+.menu-shortcut{
+
+background:white;
+
+width:90%;
+
+margin:-40px auto;
+
+padding:25px;
+
+border-radius:30px;
+
+display:flex;
+
+justify-content:space-around;
+
+box-shadow:
+
+0 10px 30px
+rgba(0,0,0,.1);
+
+}
+
+.menu-shortcut a{
+
+text-decoration:none;
+
+color:#333;
+
+}
+
+.menu-shortcut div{
+
+text-align:center;
+
+}
+
+/* ================= */
+/* CONTENT */
+/* ================= */
+
+.content{
+
+width:90%;
+
+margin:80px auto;
+
+display:grid;
+
+gap:25px;
+
+}
+
+.card{
+
+background:white;
+
+padding:35px;
+
+border-radius:24px;
+
+display:flex;
+
+gap:25px;
+
+box-shadow:
+
+0 10px 25px
+rgba(0,0,0,.08);
+
+}
+
+.icon{
+
+font-size:60px;
+
+}
+
+.card p{
+
+line-height:1.8;
+
+margin-top:10px;
+
+}
+
+.card a{
+
+text-decoration:none;
+
+color:#7652ff;
+
+font-weight:700;
+
+}
+
+/* ================= */
+/* PAGE */
+/* ================= */
+
+.page{
+
+width:90%;
+
+max-width:1000px;
+
+margin:50px auto;
+
+}
+
+.page h1{
+
+background:
+
+linear-gradient(
+90deg,
+#6b52ff,
+#b05dff
+);
+
+background-clip:text;
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+color:transparent;
+
+}
+
+.info-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:25px;
+
+margin-bottom:25px;
+
+box-shadow:
+
+0 10px 30px
+rgba(0,0,0,.08);
+
+}
+
+.tip-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+auto-fit,
+minmax(
+250px,
+1fr
+)
+
+);
+
+gap:20px;
+
+}
+
+.tip{
+
+background:
+
+linear-gradient(
+135deg,
+#6b52ff,
+#a55fff
+);
+
+padding:40px;
+
+color:white;
+
+border-radius:25px;
+
+text-align:center;
+
+}
+
+/* ================= */
+/* SELF CHECK */
+/* ================= */
+
+.test{
+
+width:90%;
+
+max-width:900px;
+
+margin:40px auto;
+
+}
+
+.question{
+
+background:white;
+
+padding:35px;
+
+border-radius:28px;
+
+margin-bottom:25px;
+
+}
+
+.option{
+
+display:flex;
+
+gap:20px;
+
+}
+
+.option label{
+
+flex:1;
+
+}
+
+.option input{
+
+display:none;
+
+}
+
+.option span{
+
+display:block;
+
+padding:18px;
+
+text-align:center;
+
+border-radius:16px;
+
+background:#f4f4f4;
+
+cursor:pointer;
+
+}
+
+.option input:checked+span{
+
+background:#7652ff;
+
+color:white;
+
+}
+
+.submit{
+
+width:100%;
+
+padding:22px;
+
+border:none;
+
+border-radius:20px;
+
+background:
+
+linear-gradient(
+90deg,
+#6f4cff,
+#b05dff
+);
+
+color:white;
+
+}
+
+/* ================= */
+/* BACK BUTTON */
+/* ================= */
+
+.back{
+
+display:inline-flex;
+align-items:center;
+gap:10px;
+
+padding:12px 20px;
+
+background:#151d35;
+
+border:1px solid rgba(255,255,255,.1);
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-weight:600;
+
+margin-bottom:20px;
+
+transition:.3s;
+
+}
+
+.back:hover{
+
+background:#222c4f;
+
+}
+
+/* ================= */
+/* ARTICLE */
+/* ================= */
+
+.article-page{
+
+width:90%;
+
+max-width:900px;
+
+margin:50px auto;
+
+background:white;
+
+padding:35px;
+
+border-radius:30px;
+
+}
+
+.article-page h1{
+
+font-size:48px;
+
+margin-bottom:10px;
+
+}
+
+.article-page>p{
+
+color:#666;
+
+margin-bottom:35px;
+
+}
+
+.article-wrapper{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.article-row{
+
+display:flex;
+
+gap:18px;
+
+padding:20px 0;
+
+border-bottom:1px solid #eee;
+
+text-decoration:none;
+
+color:#111;
+
+align-items:flex-start;
+
+}
+
+.article-row:hover{
+
+opacity:.85;
+
+}
+
+/* THUMBNAIL FIX */
+
+.article-row img{
+
+width:110px;
+
+height:75px;
+
+min-width:110px;
+
+max-width:110px;
+
+object-fit:cover;
+
+border-radius:14px;
+
+display:block;
+
+}
+
+.article-info{
+
+flex:1;
+
+}
+
+.article-info h2{
+
+font-size:20px;
+
+font-weight:800;
+
+margin-bottom:8px;
+
+line-height:1.5;
+
+}
+
+.article-info p{
+
+font-size:15px;
+
+line-height:1.7;
+
+color:#666;
+
+margin-bottom:8px;
+
+}
+
+.article-info span{
+
+font-size:14px;
+
+color:#888;
+
+}
+
+/* ================= */
+/* FOOTER */
+/* ================= */
+
+footer{
+
+background:#060a2d;
+
+color:white;
+
+padding:50px;
+
+text-align:center;
+
+}
+
+/* ================= */
+/* MOBILE */
+/* ================= */
+
+@media(max-width:768px){
+
+.hero-content{
+
+flex-direction:column;
+
+}
+
+.left h1{
+
+font-size:42px;
+
+}
+
+.menu-shortcut{
+
+flex-wrap:wrap;
+
+gap:20px;
+
+}
+
+.option{
+
+flex-direction:column;
+
+}
+
+.page h1{
+
+font-size:36px;
+
+}
+
+.article-row img{
+
+width:90px;
+
+height:65px;
+
+min-width:90px;
+
+}
+
+.article-info h2{
+
+font-size:17px;
+
+}
+
+}
+/* ================= */
+/* CHALLENGE */
+/* ================= */
+
+.challenge-container{
+
+width:90%;
+max-width:800px;
+margin:40px auto;
+
+}
+
+.challenge-card{
+
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:
+0 10px 25px
+rgba(0,0,0,.08);
+
+}
+
+.challenge-card label{
+
+display:block;
+padding:15px 0;
+cursor:pointer;
+font-size:16px;
+
+}
+
+.challenge-card input[type="checkbox"]{
+
+margin-right:10px;
+transform:scale(1.2);
+
+}
+
+/* ================= */
+/* INPUT NAMA */
+/* ================= */
+
+#username{
+
+width:100%;
+padding:15px;
+border:none;
+border-radius:15px;
+background:#f3f4f6;
+margin-bottom:20px;
+font-size:16px;
+
+}
+
+/* ================= */
+/* PROGRESS BAR */
+/* ================= */
+
+.progress-box{
+
+width:100%;
+height:22px;
+background:#e5e7eb;
+border-radius:20px;
+overflow:hidden;
+margin-bottom:10px;
+
+}
+
+.progress{
+
+height:100%;
+width:0%;
+background:
+linear-gradient(
+90deg,
+#6f4cff,
+#b05dff
+);
+
+transition:.5s;
+
+}
+
+#progressText{
+
+font-weight:600;
+margin-bottom:20px;
+
+}
+
+/* ================= */
+/* BADGE */
+/* ================= */
+
+#badge{
+
+display:none;
+margin-top:30px;
+padding:25px;
+border-radius:20px;
+text-align:center;
+
+background:
+linear-gradient(
+135deg,
+#fff8d6,
+#ffe38a
+);
+
+color:#222;
+
+border:3px solid gold;
+
+}
+
+#badge h2{
+
+font-size:32px;
+margin-bottom:10px;
+
+}
+
+#badge h3{
+
+font-size:24px;
+color:#6f4cff;
+
+}
+
+/* ================= */
+/* DOWNLOAD BUTTON */
+/* ================= */
+
+#downloadBtn{
+
+margin-top:20px;
+
+padding:15px 25px;
+
+border:none;
+
+border-radius:15px;
+
+background:
+linear-gradient(
+90deg,
+#ffbf00,
+#ffd95e
+);
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#downloadBtn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* ================= */
+/* VISITOR CARD */
+/* ================= */
+
+.visitor-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:
+0 10px 25px
+rgba(0,0,0,.08);
+
+margin-top:30px;
+
+}
+
+.visitor-card h2{
+
+font-size:22px;
+
+}
+
+.visitor-card span{
+
+display:block;
+
+font-size:48px;
+
+font-weight:800;
+
+color:#6f4cff;
+
+margin-top:10px;
+
+}
+
+.more-games{
+
+margin-top:40px;
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,.08);
+
+text-align:center;
+
+max-width:1000px;
+
+margin-left:auto;
+
+margin-right:auto;
+
+}
+
+.more-games p{
+
+max-width:800px;
+
+margin:15px auto 0;
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+/* GAME SEHAT */
+
+body{
+background:#f4f6ff;
+}
+
+.game-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+align-items:stretch;
+}
+
+.game-card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+display:flex;
+flex-direction:column;
+
+height:100%;
+}
+
+.game-content{
+padding:20px;
+
+display:flex;
+flex-direction:column;
+
+flex:1;
+}
+
+.benefit{
+margin-top:auto;
+
+background:#f8fafc;
+padding:12px;
+border-radius:12px;
+font-size:14px;
+line-height:1.7;
+}
+
+/* BOX TEKS BAWAH */
+
+.more-games{
+
+width:100%;
+
+margin-top:40px;
+
+padding:40px;
+
+background:linear-gradient(
+135deg,
+#6f4cff,
+#b05dff
+);
+
+color:white;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.more-games h2{
+
+font-size:38px;
+
+margin-bottom:20px;
+
+}
+
+.more-games p{
+
+max-width:850px;
+
+margin:15px auto;
+
+line-height:1.9;
+
+font-size:18px;
+
+color:rgba(255,255,255,.95);
+
+}
